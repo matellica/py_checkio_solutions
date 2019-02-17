@@ -5,9 +5,7 @@ import re
 
 
 def checkio(password):
-    if not (0 < len(password) <= 64):
-        return False
-    if (len(password) < 10):
+    if not (10 <= len(password) <= 64):
         return False
     if not (re.match("[a-zA-Z0-9]+", password)):
         return False
@@ -20,7 +18,7 @@ def checkio(password):
     return True
 
 
-if __name__ == '__main__':
+def test_checkio():
     # These "asserts" using only for self-checking and not necessary for auto-testing
     assert checkio('A1213pokl') == False, "1st example"
     assert checkio('bAse730onE4') == True, "2nd example"
@@ -28,3 +26,7 @@ if __name__ == '__main__':
     assert checkio('QWERTYqwerty') == False, "4th example"
     assert checkio('123456123456') == False, "5th example"
     assert checkio('QwErTy911poqqqq') == True, "6th example"
+
+
+if __name__ == '__main__':
+    test_checkio()

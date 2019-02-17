@@ -1,6 +1,8 @@
 CheckiO My Solutions
 ===================
 
+[![Build Status](https://travis-ci.org/matellica/py_checkio_solutions.svg?branch=master)](https://travis-ci.org/matellica/py_checkio_solutions)
+
 ## Preparation
 
 [**CheckiO-client**](https://github.com/CheckiO/checkio-client)

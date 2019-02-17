@@ -19,7 +19,7 @@ def checkio(text: str) -> str:
     return res
 
 
-if __name__ == '__main__':
+def test_checkio():
     assert checkio("Hello World!") == "l", "Hello test"
     assert checkio("How do you do?") == "o", "O is most wanted"
     assert checkio("One") == "e", "All letter only once."
@@ -29,3 +29,7 @@ if __name__ == '__main__':
     print("Start the long test")
     assert checkio("a" * 9000 + "b" * 1000) == "a", "Long."
     print("The local tests are done.")
+
+
+if __name__ == '__main__':
+    test_checkio()
