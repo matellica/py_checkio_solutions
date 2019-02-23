@@ -1,10 +1,8 @@
 #!/usr/bin/env checkio --domain=py run most-wanted-letter
-
 # https://py.checkio.org/mission/most-wanted-letter/
 
 
 def checkio(text: str) -> str:
-
     text = text.lower()
     numbers = {}
     for char in text:

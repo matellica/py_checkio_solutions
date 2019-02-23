@@ -20,3 +20,17 @@ Sync all my solutions on one folder
 ```bash
 $ checkio sync ~FOLDER-NAME~
 ```
+
+## chekio check
+```bash
+$ sort-array-by-element-frequency.py check
+Start checking...
+
+.....
+
+!!! Congratulation !!!
+
+Link for checking solution of other users: https://py.checkio.org/mission/sort-array-by-element-frequency/publications/
+
+Link for sharing solution: https://py.checkio.org/mission/sort-array-by-element-frequency/publications/add/
+```
