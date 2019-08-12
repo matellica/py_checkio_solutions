@@ -23,7 +23,7 @@ $ checkio sync ~FOLDER-NAME~
 
 ## chekio check
 ```bash
-$ sort-array-by-element-frequency.py check
+$ sort-array-by-element-frequency.py --check
 Start checking...
 
 .....
