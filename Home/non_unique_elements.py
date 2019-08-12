@@ -2,7 +2,6 @@
 # https://py.checkio.org/mission/non-unique-elements/
 
 import time
-import timeit
 
 
 def measure(func):
@@ -16,6 +15,7 @@ def measure(func):
         print(f'{func.__name__}: {execution_time}')
         return result
     return wrapper
+
 
 @measure
 def checkio1(data: list) -> list:
@@ -45,12 +45,6 @@ def checkio3(data: list) -> list:
     return [item for item in data if counter[item] > 1]
 
 
-@measure
-def checkio4(data: list) -> list:
-    counter = set(data)
-    return [item for item in counter if  > 1]
-
-
 def test_checkio():
     #These "asserts" using only for self-checking and not necessary for auto-testing
     assert list(checkio([1, 2, 3, 1, 3])) == [1, 3, 1, 3], "1st example"
@@ -62,7 +56,6 @@ def test_checkio():
 
 if __name__ == "__main__":
     # test_checkio()
-    # lst = list(range(10**1))+[0]
     lst = list(range(10**4))+[0]
     checkio1(lst)
     checkio2(lst)
