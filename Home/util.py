@@ -1,5 +1,7 @@
 from decimal import Decimal
 import time
+import random
+import string
 
 scores = {}
 
@@ -20,3 +22,7 @@ def print_scores():
     for idx, score in enumerate(sorted(scores.items(), key=lambda x: x[1]), 1):
         print(f'{idx}** {score[0]}: {score[1]}')
     print('----------------------------------------')
+
+
+def random_string(n):
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=n))
