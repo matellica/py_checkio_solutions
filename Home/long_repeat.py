@@ -2,6 +2,7 @@
 # https://py.checkio.org/mission/long-repeat/
 # END_DESC
 import util
+import sys
 
 
 @util.measure
@@ -78,22 +79,10 @@ def test_checkio():
     print('"Run" is good. How is "Check"?')
 
 
-def measure_func(func, evals):
-    for ev in evals:
-        eval(f'{func}({"ev"})')
-        for idx in range(2,10):
-            funcname = f'{func}{idx}'
-            if funcname in globals():
-                eval(f'{func}{idx}({"ev"})')
-            else:
-                break
-        util.print_scores()
-
-
 if __name__ == '__main__':
     # test_checkio()
     evals = [
         'ddvvrwwwrggg',
         util.random_string(10240)
     ]
-    measure_func('long_repeat', evals)
+    util.measure_func(sys.modules[__name__], 'long_repeat', evals)
